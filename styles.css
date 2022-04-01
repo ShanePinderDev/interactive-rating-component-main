@@ -35,8 +35,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -89,7 +89,7 @@ select {
 }
 
 body {
-  font-family: "Overpass", sans-serif;
+  font-family: 'Overpass', sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
@@ -172,10 +172,10 @@ body {
   transition: all 0.3s;
 }
 
-.rating-number:hover,
-.rating-number:active {
+.rating-number:hover:not(.rating-selected) {
   color: #fff;
   background-color: hsl(216, 12%, 54%);
+  /* background-color: blue; */
 }
 
 .btn-submit:link,

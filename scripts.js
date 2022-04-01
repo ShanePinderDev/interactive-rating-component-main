@@ -17,9 +17,13 @@ function changeButton(e) {
 }
 
 btnSubmit.addEventListener("click", function () {
-  document.querySelector(".container-rating").classList.add("hidden");
-  document.querySelector(".container-thanks").classList.remove("hidden");
-  document.querySelector(
-    ".text-rating"
-  ).innerText = `You selected ${currentActive} out of 5`;
+  if (Number(currentActive) !== 0) {
+    document.querySelector(".container-rating").classList.add("hidden");
+    document.querySelector(".container-thanks").classList.remove("hidden");
+    document.querySelector(
+      ".text-rating"
+    ).innerText = `You selected ${currentActive} out of 5`;
+  } else {
+    alert("Please select a rating");
+  }
 });
